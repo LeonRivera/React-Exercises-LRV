@@ -10,8 +10,6 @@ function App() {
     baseURL: 'https://jsonplaceholder.typicode.com/todos'
   })
 
-  //useEffect works for tell React that your component needs to do
-  //something after render
   useEffect(() => {
     api.get('/').then(res => {
       setTodos(res.data);
@@ -20,19 +18,20 @@ function App() {
 
   return (
 
+
     <div>
-      <h1>TODOS:</h1>
+      <h1>TODOS LIST</h1>
       {todos.map(todo => {
-        return <div className="card" key={todo.id} >
-          <div className="card-header">
-            {todo.id}
-          </div>
-          <div className="card-body">
-            <h5 className="card-title">{todo.title}</h5>
-            <p className="card-text">{todo.completed ? 'completed' : 'not completed'}</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
-          </div>
+
+        return <div className="card my-5" key={todo.id}>
+          <img src="https://i.pinimg.com/originals/71/6d/60/716d609bcb461d893984f74648498124.png" style={{width: '3rem'}} className="card-img-top " alt="..."></img>
+            <div className="card-body">
+              <h5 className="card-title">Titulo: {todo.title}</h5>
+              <p className="card-text">Terminado: {todo.completed ? 'si' : 'no'}</p>
+              <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
         </div>
+
       })}
     </div>
   )
