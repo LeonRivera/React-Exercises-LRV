@@ -13,7 +13,9 @@ npm i
 
 ------------------------------
 
-## LOCAL DEPLOYMENT
+## LOCAL DEPLOYMENT (Actual Project)
+enter root folder
+npm i
 yarn dev
 
 -----------------------------
@@ -27,5 +29,5 @@ Install
     baseURL: 'https://someapi/'
   })`
 
-  
+ Axios documentation : https://axios-http.com 
 
